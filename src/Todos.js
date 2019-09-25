@@ -16,9 +16,7 @@ const ListTodos = `
 `;
 
 function App() {
-  const [people, setPeople] = useState([]);
   const [todos, setTodos] = useState([]);
-
   useEffect(() => {
     async function getTodos() {
       const todoData = await API.graphql(graphqlOperation(ListTodos));
@@ -26,15 +24,6 @@ function App() {
     }
     getTodos();
   }, []);
-
-  useEffect(() => {
-    async function getPeople() {
-      const todoData = await API.get("peopleapi", "/people");
-      setPeople(todoData.data.people);
-    }
-    getPeople();
-  }, []);
-
   return (
     <div className="App">
       <header className="App-header">
@@ -55,12 +44,6 @@ function App() {
         <div>
           <h3>{todo.name}</h3>
           <p>{todo.description}</p>
-        </div>
-      ))}
-      {people.map((person, i) => (
-        <div>
-          <h3>{person.name}</h3>
-          <p>{person.hair_color}</p>
         </div>
       ))}
     </div>
