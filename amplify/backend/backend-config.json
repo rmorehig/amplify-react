@@ -97,6 +97,10 @@
 		"contactsTable": {
 			"service": "DynamoDB",
 			"providerPlugin": "awscloudformation"
+		},
+		"amplifys3storage": {
+			"service": "S3",
+			"providerPlugin": "awscloudformation"
 		}
 	}
 }
