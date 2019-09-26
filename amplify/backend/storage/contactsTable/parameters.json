@@ -1,0 +1,7 @@
+{
+    "tableName": "contactsTable",
+    "partitionKeyName": "name",
+    "partitionKeyType": "S",
+    "sortKeyName": "city",
+    "sortKeyType": "S"
+}

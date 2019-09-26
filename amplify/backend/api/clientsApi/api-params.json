@@ -1,0 +1,35 @@
+{
+    "paths": [
+        {
+            "name": "/clients",
+            "lambdaFunction": "clientsFunction",
+            "privacy": {
+                "private": true,
+                "auth": []
+            }
+        }
+    ],
+    "resourceName": "clientsApi",
+    "apiName": "clientsApi",
+    "functionArns": [
+        {
+            "lambdaFunction": "clientsFunction"
+        }
+    ],
+    "privacy": {
+        "auth": 0,
+        "unauth": 0,
+        "authRoleName": "amplify-react-dev-20190925145230-authRole",
+        "unAuthRoleName": "amplify-react-dev-20190925145230-unauthRole"
+    },
+    "dependsOn": [
+        {
+            "category": "function",
+            "resourceName": "clientsFunction",
+            "attributes": [
+                "Name",
+                "Arn"
+            ]
+        }
+    ]
+}
